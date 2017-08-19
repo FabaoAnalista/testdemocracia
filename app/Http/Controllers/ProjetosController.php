@@ -80,9 +80,9 @@ public function update(Request $request, Projetos $projetos)
  * @param  int  $id
  * @return \Illuminate\Http\Response
  */
-public function destroy(Projetos $projetos)
-{
-    $projetos ->delete();
-    return redirect('/projetos');
-}
+  public function destroy(Projetos $projetos)
+  {
+      $projetos ->delete();
+      return redirect('/projetos');
+  }
 }

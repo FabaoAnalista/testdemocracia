@@ -1,6 +1,4 @@
 @extends('layout.app')
-
-
 @section('title_page')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -14,8 +12,6 @@
     </ol>
 </section>
 @endsection
-
-
 @section('content_page')
 
 <P> Conteudo da pagina Sisdemocracia</P>

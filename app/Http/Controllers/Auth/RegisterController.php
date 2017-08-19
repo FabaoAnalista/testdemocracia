@@ -78,7 +78,6 @@ class RegisterController extends Controller
             'titEleitor' => $data['name'],
             'dataNascimento' => $data['dataNascimento'],
             'type' => '2',
-
         ]);
     }
 }
