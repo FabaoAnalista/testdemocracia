@@ -69,7 +69,7 @@
                   <div class="caption">
                     <h3>Projeto Estacionamento</h3>
                     <p>Este projeto tem por obejtivo regulamentar ... </p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                    <p><a href="/projetos" class="btn btn-primary" role="button">Button</a> </p>
                   </div>
                 </div>
               </div>
@@ -78,9 +78,9 @@
                 <div class="thumbnail">
                   <img src="http://lorempixel.com/400/200/sports/2" class="img-responsive" alt="...">
                   <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Projeto Estacionamento no centro </p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                    <h3>Projeto Parque do Areao</h3>
+                    <p>Este projeto trata da revitalização do parque do areao ... </p>
+                    <p><a href="/projetos" class="btn btn-primary" role="button">Button</a> </p>
                   </div>
                 </div>
               </div>
@@ -88,9 +88,9 @@
                 <div class="thumbnail">
                   <img src="http://lorempixel.com/400/200/sports/3" class="img-responsive" alt="...">
                   <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Projeto Estacionamento no centro </p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+                    <h3>Projeto Escola Tecnologica</h3>
+                    <p>Este projeto trata da inserção do curriculun...</p>
+                    <p><a href="/projetos" class="btn btn-primary" role="button">Button</a> </p>
                   </div>
                 </div>
               </div>
