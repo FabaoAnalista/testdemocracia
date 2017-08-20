@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Projetos;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests;
 
 class ProjetosController extends Controller
 {
@@ -11,8 +14,13 @@ class ProjetosController extends Controller
  }
 public function index()
 {
+        
+      if(Auth::user()->type == 1){
+    
     $p = Projetos::all();
     return view ('projetos.index')->with('projetos', $p);
+      } else $p = Projetos::all();
+      return view ('painelvotar');
 }
 /**
  * Show the form for creating a new resource.
