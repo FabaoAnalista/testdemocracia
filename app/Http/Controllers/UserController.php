@@ -33,7 +33,7 @@ class UserController extends Controller
     public function index(){
         if (Auth::user()->type == 2){
         
-         return redirect('/projetos');} 
+    return redirect('/projetos');} 
         else {
           $users = User::all();
           return view('users.index')->with('users', $users);
