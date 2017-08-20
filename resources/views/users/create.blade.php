@@ -1,5 +1,5 @@
-@extends('layout.master')
-@section('conteudo')
+@extends('layout.app')
+@section('content_page')
 
 <div class="container">
     <div class="row">
@@ -83,10 +83,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('titEleitor') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('titEleitor') ? ' has-error' : '' }}">
                             <label for="titEleitor" class="col-md-4 control-label">Título de Eleitor</label>
                             <div class="col-md-6">
-                                <input id="titEleitor" type="text" class="form-control" name="titELeitor" value="" required autofocus>
+                                <input id="titEleitor" type="text" class="form-control" name="titEleitor" value="1" required autofocus>
                                 @if ($errors->has('titEleitor'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('titEleitor') }}</strong>
@@ -98,7 +98,7 @@
                         <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
                             <label for="type" class="col-md-4 control-label">Tipo</label>
                             <div class="col-md-6">
-                                <input id="tipo" type="text" class="form-control" name="type" value="1" required autofocus>
+                                <input id="type" type="text" class="form-control" name="type" value="1" required autofocus>
                                 @if ($errors->has('type'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('type') }}</strong>

@@ -19,20 +19,21 @@ class UserController extends Controller
 
   public function show($id)
     {
-        $users = Users::find($id);
+        $users = User::find($id);
         return view('users.show')->with('users',$users);
     }
     public function edit($id)
     {
-        $users = Users::find($id);
+        $users = User::find($id);
         return view('users.edit')->with('users',$users);
     }
 
         
 
     public function index(){
-        if (Auth::user()->type == 1){
-        return view('projetos.index');} 
+        if (Auth::user()->type == 2){
+        
+         return redirect('/projetos');} 
         else {
           $users = User::all();
           return view('users.index')->with('users', $users);
@@ -125,13 +126,13 @@ class UserController extends Controller
                      ->update(['name' => $request->name]);
                 return redirect('/dashboard');
     }
-       public function destroy($id)
-    {
-      $user = User::findOrFail($id);
-      $user->delete();
-      Session::flash('flash_message', 'Usuário deletado!');
-      return redirect('/home');
-    }
+    
+   public function destroy($id)
+{
+    $user = User::find($id);
+    $user ->delete();
+    return redirect('/users');
+}
 
 
 }
