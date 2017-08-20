@@ -32,7 +32,7 @@
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             @if (Route::has('login'))
             @auth
-            <a href="{{ url('/dashboard') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dahsboard</a>
+            <a href="{{ url('/home') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Logout</a>
             @else
             <a href="{{ route('login') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
             <a href="{{ route('register') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Registre-se</a>
@@ -43,7 +43,7 @@
           <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
             @if (Route::has('login'))
             @auth
-            <a href="{{ url('/template') }}" class="w3-bar-item w3-button w3-padding-large">Dahsboard</a>
+            <a href="{{  url('/home')) }}" class="w3-bar-item w3-button w3-padding-large"> Logout</a>
             @else
             <a href="{{ route('login') }}" class="w3-bar-item w3-button w3-padding-large">Login</a>
             <a href="{{ route('register') }}" class="w3-bar-item w3-button w3-padding-large">Registre-se</a>
@@ -57,7 +57,7 @@
           <h1 class="w3-margin w3-jumbo">Sisdemocracia</h1>
           <p class="w3-xlarge">Um sistema para projetos de iniciativa popular de João Monlevade</p>
           <!--Pensar sobre utilidade do button -->
-          
+
           <a href="{{ route('login') }}" class="w3-button w3-white w3-padding-large w3-large w3-margin-top" role="button" aria-pressed="true">Votar em Projetos</a>
         </header>
         </div>
@@ -70,7 +70,7 @@
                   <div class="caption">
                     <h3>Projeto Estacionamento</h3>
                     <p>Este projeto tem por obejtivo regulamentar ... </p>
-                    <p><a href="/projetos" class="btn btn-primary" role="button">Button</a> </p>
+                    <p><a href="/projetos" class="btn btn-primary" role="button">Votar</a> </p>
 
                   </div>
                 </div>
@@ -82,7 +82,7 @@
                   <div class="caption">
                     <h3>Projeto Parque do Areao</h3>
                     <p>Este projeto trata da revitalização do parque do areao ... </p>
-                    <p><a href="/projetos" class="btn btn-primary" role="button">Button</a> </p>
+                    <p><a href="/projetos" class="btn btn-primary" role="button">Votar</a> </p>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@
                   <div class="caption">
                     <h3>Projeto Escola Tecnologica</h3>
                     <p>Este projeto trata da inserção do curriculun...</p>
-                    <p><a href="/projetos" class="btn btn-primary" role="button">Button</a> </p>
+                    <p><a href="/projetos" class="btn btn-primary" role="button">Votar</a> </p>
                   </div>
                 </div>
               </div>

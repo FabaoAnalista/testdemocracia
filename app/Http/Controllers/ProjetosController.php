@@ -65,8 +65,9 @@ public function edit(Projetos $projetos)
  */
 public function update(Request $request, Projetos $projetos)
 {
+
   $projetos->titulo = $request->titulo;
-  $projetos->subtitulo = $request->subtitulo;
+  $projetos->subTitulo = $request->subTitulo;
   $projetos->descriçao= $request->descriçao;
   $projetos->status=$request->status;
   $projetos->metaVotos=$request->metaVotos;

@@ -28,12 +28,13 @@
                       <label for="descriçao">Descrição</label>
                       <input type="text" name="descriçao" class="form-control" placeholder="descriçao">
                     </div>
-              
+
                     <div class="form-group">
                       <label for="metaVotos">Meta de Votos</label>
                       <input type="number" name="metaVotos" class="form-control" placeholder="metaVotos">
                     </div>
                     <input type="submit" name ="botaoSalvar" value="Salvar">
+                    <a href="/projetos">Voltar</a>
                   </div>
               </div>
           @endsection

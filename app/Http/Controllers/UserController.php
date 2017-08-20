@@ -131,7 +131,7 @@ class UserController extends Controller
                 return redirect('/dashboard');
     }
 
- 
+
 
        public function destroy($id)
     {
@@ -141,5 +141,5 @@ class UserController extends Controller
       return redirect('/home');
     }
 
-    
+
 }
