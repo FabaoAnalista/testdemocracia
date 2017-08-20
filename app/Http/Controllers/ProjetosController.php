@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Projetos;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests;
 
 class ProjetosController extends Controller
 {
@@ -11,8 +14,13 @@ class ProjetosController extends Controller
  }
 public function index()
 {
+        
+      if(Auth::user()->type == 1){
+    
     $p = Projetos::all();
     return view ('projetos.index')->with('projetos', $p);
+      } else $p = Projetos::all();
+      return view ('painelvotar')->with('projetos',$p);
 }
 /**
  * Show the form for creating a new resource.
@@ -42,35 +50,25 @@ public function store(Request $request)
  * @param  int  $id
  * @return \Illuminate\Http\Response
  */
-public function show(Projetos $projetos)
-{
-    return view('/projetos.show')->with('projetos',$projetos);
-}
-/**
- * Show the form for editing the specified resource.
- *
- * @param  int  $id
- * @return \Illuminate\Http\Response
- */
-public function edit(Projetos $projetos)
-{
-      return view('/projetos.edit')->with('projetos',$projetos);
-}
-
-/**
- * Update the specified resource in storage.
- *
- * @param  \Illuminate\Http\Request  $request
- * @param  int  $id
- * @return \Illuminate\Http\Response
- */
-public function update(Request $request, Projetos $projetos)
+     public function show($id)
+    {
+        $projetos = Projetos::find($id);
+        return view('projetos.show')->with('projetos',$projetos);
+    }
+    public function edit($id)
+    {
+        $projetos = Projetos::find($id);
+        return view('projetos.edit')->with('projetos',$projetos);
+    }
+public function update(Request $request, $id)
 {
 
+       
+  $projetos = Projetos::find($id);
   $projetos->titulo = $request->titulo;
   $projetos->subTitulo = $request->subTitulo;
   $projetos->descriçao= $request->descriçao;
-  $projetos->status=$request->status;
+  $projetos->statusProjeto=$request->statusProjeto;
   $projetos->metaVotos=$request->metaVotos;
   $projetos->save();
   return redirect('/projetos');
@@ -82,8 +80,9 @@ public function update(Request $request, Projetos $projetos)
  * @param  int  $id
  * @return \Illuminate\Http\Response
  */
-public function destroy(Projetos $projetos)
+public function destroy($idProjeto)
 {
+    $projetos = Projetos::find($idProjeto);
     $projetos ->delete();
     return redirect('/projetos');
 }

@@ -8,8 +8,14 @@ Route::get('dashboard', function () {
 });
 //Rotas para dashboard de projetos e recuros de projetos
 
+Route::resource('/votos', 'VotosController');
 Route::resource('/projetos', 'ProjetosController');
-Route::post('/projetos/edit/{projetos->idProjeto}', 'ProjetosController@edit');
+Route::get('/votar/{idProjeto}',[
+    'uses' => 'VotosController@votar',
+    'as'   => 'votar'
+]);
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

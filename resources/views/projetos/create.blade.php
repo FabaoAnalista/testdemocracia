@@ -15,7 +15,7 @@
                     <!-- comando para reconhecer o cliente -->
                     {{csrf_field()}}
                     <div class="form-group">
-                      <label for="titulo" class="control-label"></label>
+                      <label for="titulo" class="control-label">Título</label>
                       <input type="text" name="titulo" class="form-control" placeholder="Titulo">
                     </div>
 
