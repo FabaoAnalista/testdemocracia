@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Dashboard</title>
-  </head>
-  <body>
-    <h1>Sisdemocracia</h1>
-  </body>
-</html>
+@include('layout.header')
+    @include('layout.sidebar')
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        @yield('title_page')
+        <section class="content">
+        @yield('content_page')
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+@include ('layout.footer')

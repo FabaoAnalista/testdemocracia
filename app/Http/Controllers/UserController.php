@@ -5,11 +5,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\User;
+//use App\Projetos;
+
 class UserController extends Controller
 {
      public function __construct() {
         $this->middleware('auth');
     }
+  //  public function
+  //  if(Auth::user()->type==1){
+
+  //  }
 
         public function show($id)
     {
@@ -122,17 +128,12 @@ class UserController extends Controller
          public function profile(){
         return View('user.profile');
     }
-
     public function updateprofile(Request $request){
-
          $user = new User;
                 $user->where('cpf', '=', Auth::user()->cpf)
                      ->update(['name' => $request->name]);
                 return redirect('/dashboard');
     }
-
-
-
        public function destroy($id)
     {
       $user = User::findOrFail($id);

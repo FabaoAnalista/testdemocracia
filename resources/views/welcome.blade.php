@@ -43,7 +43,7 @@
           <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
             @if (Route::has('login'))
             @auth
-            <a href="{{  url('/home')) }}" class="w3-bar-item w3-button w3-padding-large"> Logout</a>
+            <a href="{{  url('/home') }}" class="w3-bar-item w3-button w3-padding-large"> Logout</a>
             @else
             <a href="{{ route('login') }}" class="w3-bar-item w3-button w3-padding-large">Login</a>
             <a href="{{ route('register') }}" class="w3-bar-item w3-button w3-padding-large">Registre-se</a>

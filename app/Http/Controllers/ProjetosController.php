@@ -21,6 +21,7 @@ public function index()
  */
 public function create()
 {
+  //if(Auth::user()->type==1)
   return view ('projetos.create');
 }
 /**

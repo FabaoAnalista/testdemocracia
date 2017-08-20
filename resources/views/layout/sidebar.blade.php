@@ -7,10 +7,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />
+                <!--img-->
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p></p>
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -33,7 +33,7 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="#"><span>Link</span></a></li>
             <li><a href="#"><span>Another Link</span></a></li>
-            <li><a href="/teste"><span>Teste</span></a></li>
+            <li><a href="#"><span>Teste</span></a></li>
             <li class="treeview">
                 <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">

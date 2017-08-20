@@ -6,9 +6,6 @@ Route::get('/', function () {
 Route::get('dashboard', function () {
     return view('dashboard');
 });
-Route::get('template', function () {
-    return view('template');
-});
 //Rotas para dashboard de projetos e recuros de projetos
 
 Route::resource('/projetos', 'ProjetosController');
@@ -26,7 +23,9 @@ Route::get('users/email', function () {
 Route::get('users/profile', function () {
     return view('users.profile');
 });
-
+Route::get('/painelvotar', function () {
+    return view('painelvotar');
+});
 
 Route::post('users/updatepassword', 'UserController@updatepassword');
 Route::post('users/updateemail', 'UserController@updateemail');
