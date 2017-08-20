@@ -20,7 +20,7 @@ public function index()
     $p = Projetos::all();
     return view ('projetos.index')->with('projetos', $p);
       } else $p = Projetos::all();
-      return view ('painelvotar');
+      return view ('painelvotar')->with('projetos',$p);
 }
 /**
  * Show the form for creating a new resource.

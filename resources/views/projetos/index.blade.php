@@ -8,9 +8,9 @@
                       <thead>
                         <tr>
                           <th>Código</th>
-                          <th>Titulo</th>
-                          <th>Subtitulo</th>
-                          <th>Desciçao</th>
+                          <th>Título</th>
+                          <th>Sub-título</th>
+                          <th>Descição</th>
                           <th>metaVotos</th>
                           <th>Editar</th>
                           <th>Excluir</th>

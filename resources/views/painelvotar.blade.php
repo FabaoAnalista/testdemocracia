@@ -1,35 +1,28 @@
-@include('layout.header')
-    @include('layout.sidebar')
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        @yield('Painel')
-        <!-- Main content -->
-        <section class="content">
-              <div class="jumbotron text-center">
-                  <h1>Painel de Projetos para Votação</h1>
+@extends('layout.app')
+@section('content_page')
+ <div class="jumbotron text-center">
+                  <h1>Painel de Projetos</h1>
               </div>
-                <table class="table table-bordered table-striped">
+                  <table class="table table-bordered table-striped">
                       <thead>
                         <tr>
                           <th>Código</th>
-                          <th>Titulo</th>
-                          <th>Subtitulo</th>
-                          <th>Desciçao</th>
-                          <th>metaVotos</th>
+                          <th>Título</th>
+                          <th>Sub-título</th>
+                          <th>Descição</th>
                           <th>Votar</th>
-                          </tr>
+                        </tr>
                       </thead>
                       <tbody>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                      </tbody>
-                      </table>
-                      @yield('content_page')
-          </section><!-- /.content -->
-      </div>
-
-@include ('layout.footer')
+                    @foreach($projetos as $p)
+                      <tr>
+                      <td>{{$p->idProjeto}}</td>
+                      <td>{{$p->titulo}}</td>
+                      <td>{{$p->subTitulo}}</td>
+                      <td>{{$p->descriçao}}</td>
+                      <td><a href="/projetos/{{ $p->idProjeto}}"><i class="fa fa-pencil fa-fw"></i>Votar</a></td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                    </table>
+@endsection
