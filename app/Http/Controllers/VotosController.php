@@ -36,6 +36,9 @@ class VotosController extends Controller
           'users_id' => $usuario,
           'projeto_idProjeto' => $id
       ]);
+          $projeto = Projetos::find($id);
+          $projeto->numvotos += 1;
+          $projeto->save();
     return redirect ('/projetos');
     }
     public function create()
