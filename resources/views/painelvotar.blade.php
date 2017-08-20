@@ -9,7 +9,6 @@
                           <th>Código</th>
                           <th>Título</th>
                           <th>Sub-título</th>
-                          <th>Descição</th>
                           <th>Votar</th>
                         </tr>
                       </thead>
@@ -19,7 +18,6 @@
                       <td>{{$p->idProjeto}}</td>
                       <td>{{$p->titulo}}</td>
                       <td>{{$p->subTitulo}}</td>
-                      <td>{{$p->descriçao}}</td>
                       <td><a href="/projetos/{{ $p->idProjeto}}"><i class="fa fa-pencil fa-fw"></i>Votar</a></td>
                     </tr>
                     @endforeach

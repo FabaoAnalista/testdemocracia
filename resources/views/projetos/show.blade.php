@@ -21,11 +21,9 @@
             <a href="/projetos" class="btn btn-primary">Voltar</a>
           </form>
 
-
-
-          @else 
-            <form method="post" action="/projetos/{{$projetos->idProjeto}}">
-            <input type="submit" class="btn btn-warning" value="Votar">
+          @else             
+          
+          <a href="{{route('votar', ['idProjeto'=> $projetos->idProjeto]) }}" class="btn btn-warning">Votar</a>
             <a href="/projetos" class="btn btn-primary">Outros projetos</a>
           @endif
 @endsection

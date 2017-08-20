@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Votos;
 use App\Projetos;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -15,6 +16,9 @@ class VotosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+         $this->middleware('auth');
+     }
     public function index()
     {
         //
@@ -25,6 +29,15 @@ class VotosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function votar($id){
+
+        $usuario = Auth::user()->id;
+           Votos::create([
+          'users_id' => $usuario,
+          'projeto_idProjeto' => $id
+      ]);
+    return redirect ('/projetos');
+    }
     public function create()
     {
         //
@@ -38,7 +51,7 @@ class VotosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
