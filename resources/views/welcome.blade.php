@@ -57,7 +57,8 @@
           <h1 class="w3-margin w3-jumbo">Sisdemocracia</h1>
           <p class="w3-xlarge">Um sistema para projetos de iniciativa popular de João Monlevade</p>
           <!--Pensar sobre utilidade do button -->
-          <button class="w3-button w3-white w3-padding-large w3-large w3-margin-top">Votar em Projetos</button>
+          
+          <a href="{{ route('login') }}" class="w3-button w3-white w3-padding-large w3-large w3-margin-top" role="button" aria-pressed="true">Votar em Projetos</a>
         </header>
         </div>
         <h2 >Conheça nossos projetos</h2>
@@ -70,6 +71,7 @@
                     <h3>Projeto Estacionamento</h3>
                     <p>Este projeto tem por obejtivo regulamentar ... </p>
                     <p><a href="/projetos" class="btn btn-primary" role="button">Button</a> </p>
+
                   </div>
                 </div>
               </div>
@@ -109,18 +111,16 @@
              <p>Powered by <a href="https://www.a3ideiasweb.com" target="_blank">www.a3ideiasweb.com</a></p>
             </footer>
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
-
+          <script>
+          // Used to toggle the menu on small screens when clicking on the menu button
+          function myFunction() {
+              var x = document.getElementById("navDemo");
+              if (x.className.indexOf("w3-show") == -1) {
+                  x.className += " w3-show";
+              } else {
+                  x.className = x.className.replace(" w3-show", "");
+              }
+          }
+          </script>
     </body>
 </html>
