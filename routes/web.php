@@ -9,7 +9,7 @@ Route::get('dashboard', function () {
 //Rotas para dashboard de projetos e recuros de projetos
 
 Route::resource('/projetos', 'ProjetosController');
-
+Route::post('/projetos/edit/{projetos->idProjeto}', 'ProjetosController@edit');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
