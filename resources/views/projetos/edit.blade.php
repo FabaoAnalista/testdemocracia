@@ -21,20 +21,20 @@
                   <input type="text" name="titulo" class="form-control" placeholder="titulo" value="{{$projetos->titulo}}">
                 </div>
                 <div class="form-group">
-                  <label for="subtitulo">Subtitulo</label>
-                  <input type="text" name="subtitulo" class="form-control" placeholder="subtitulo" value="{{$projetos->subTitulo}}">
+                  <label for="subTitulo">Subtitulo</label>
+                  <input type="text" name="subTitulo" class="form-control" placeholder="subTitulo" value="{{$projetos->subTitulo}}">
                 </div>
                 <div class="form-group">
-                  <label for="descricao">Descricao</label>
-                  <input type="text" name="descricao" class="form-control" placeholder="descricao" value="{{$projetos->descricao}}">
+                  <label for="descriçao">Descrição</label>
+                  <input type="text" name="descriçao" class="form-control" placeholder="descriçao" value="{{$projetos->descriçao}}">
                 </div>
                 <div class="form-group">
-                  <label for="metaVotos">Status</label>
+                  <label for="metaVotos">Meta de Votos</label>
                   <input type="number" name="metaVotos" class="form-control" placeholder="metaVotos" value="{{$projetos->metaVotos}}">
                 </div>
                 <div class="form-group">
-                  <label for="status">Status</label>
-                  <input type="number" name="status" class="form-control" placeholder="status" value="{{$projetos->status}}">
+                  <label for="statusProjeto">Status</label>
+                  <input type="number" name="statusProjeto" class="form-control" placeholder="statusProjeto" value="{{$projetos->statusProjeto}}">
                 </div>
                 <input type="submit" class="btn btn-primary" name ="botaoSalvar" value="Salvar">
                 <a href="/projetos" class="btn btn-primary">Voltar</a>

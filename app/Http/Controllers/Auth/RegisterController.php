@@ -75,7 +75,7 @@ class RegisterController extends Controller
                'login' => $data['login'],
                'cpf' => $data['cpf'],
                'nomeMae' => $data['nomeMae'],
-               'titEleitor' => $data['name'],
+               'titEleitor' => $data['titEleitor'],
                'dataNascimento' => $data['dataNascimento'],
                'type' => '2',
            ]);

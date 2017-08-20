@@ -1,13 +1,6 @@
-@include('layout.header')
-
-    @include('layout.sidebar')
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        @yield('Exibe Projetos')
-        <!-- Main content -->
-        <section class="content">
-          @section('conteudo')
-              <div class="jumbotron text-center">
+@extends('layout.app')
+@section('content_page')
+ <div class="jumbotron text-center">
                   <h1>Painel de Projetos</h1>
               </div>
               <a class="btn btn-primary" href="/projetos/create">Inserir</a>
@@ -37,9 +30,4 @@
                     @endforeach
                     </tbody>
                     </table>
-          @endsection
-        @yield('conteudo')
-      @yield('content_page')
-        </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
-@include ('layout.footer')
+@endsection
