@@ -56,7 +56,7 @@ class RegisterController extends Controller
              'nomeMae' => 'required|string|max:255',
              'titEleitor' => 'required|string|max:20|unique:users',
              'dataNascimento' => 'required',
-             'type' => '2',
+             'type' => '1',
          ]);
      }
 
@@ -77,7 +77,7 @@ class RegisterController extends Controller
                'nomeMae' => $data['nomeMae'],
                'titEleitor' => $data['titEleitor'],
                'dataNascimento' => $data['dataNascimento'],
-               'type' => '2',
+               'type' => '1',
            ]);
        }
    }
