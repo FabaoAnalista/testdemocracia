@@ -38,6 +38,10 @@ class VotosController extends Controller
       ]);
           $projeto = Projetos::find($id);
           $projeto->numvotos += 1;
+          
+          if($projeto->numvotos == $projeto->metaVotos){
+              $projeto->statusProjeto = 1;
+          }
           $projeto->save();
     return redirect ('/projetos');
     }
