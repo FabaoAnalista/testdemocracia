@@ -67,7 +67,7 @@ public function update(Request $request, Projetos $projetos)
 {
   $projetos->titulo = $request->titulo;
   $projetos->subtitulo = $request->subtitulo;
-  $projetos->descricao= $request->descricao;
+  $projetos->descriçao= $request->descriçao;
   $projetos->status=$request->status;
   $projetos->metaVotos=$request->metaVotos;
   $projetos->save();
@@ -80,9 +80,9 @@ public function update(Request $request, Projetos $projetos)
  * @param  int  $id
  * @return \Illuminate\Http\Response
  */
-  public function destroy(Projetos $projetos)
-  {
-      $projetos ->delete();
-      return redirect('/projetos');
-  }
+public function destroy(Projetos $projetos)
+{
+    $projetos ->delete();
+    return redirect('/projetos');
+}
 }
