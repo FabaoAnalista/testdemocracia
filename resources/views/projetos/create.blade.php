@@ -33,8 +33,8 @@
                       <label for="metaVotos">Meta de Votos</label>
                       <input type="number" name="metaVotos" class="form-control" placeholder="metaVotos">
                     </div>
-                    <input type="submit" name ="botaoSalvar" value="Salvar">
-                    <a href="/projetos">Voltar</a>
+                    <input type="submit"class="btn btn-primary" name ="botaoSalvar" value="Salvar">
+                    <a href="/projetos" class="btn btn-primary" >Voltar</a>
                   </div>
               </div>
           @endsection
