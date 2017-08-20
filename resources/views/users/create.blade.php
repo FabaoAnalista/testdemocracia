@@ -8,7 +8,7 @@
                 <div class="panel-heading">Criar Usuário</div>
                 <div class="panel-body">
 
-                    <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data" action="/home">
+                    <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data" action="/users">
                       {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -98,7 +98,7 @@
                         <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
                             <label for="type" class="col-md-4 control-label">Tipo</label>
                             <div class="col-md-6">
-                                <input id="tipo" type="text" class="form-control" name="type" value="" required autofocus>
+                                <input id="tipo" type="text" class="form-control" name="type" value="1" required autofocus>
                                 @if ($errors->has('type'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('type') }}</strong>
@@ -123,7 +123,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">Salvar</button>
-                                <input type="button" class="btn btn-primary" href="/Usuarios" value="Voltar" onClick="JavaScript: window.history.back();">
+                                <input type="button" class="btn btn-primary" href="/usuarios" value="Voltar" onClick="JavaScript: window.history.back();">
                             </div>
                         </div>
                     </form>

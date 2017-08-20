@@ -1,36 +1,33 @@
-@extends('layout.master')
-
-@section('conteudo')
-
-<title>Sistema Motel</title>
-<h1>Lista de Usuários</h1>
-
-<a href="/users/create" class="btn btn-primary">Inserir</a>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Nome</th>
-      <th>Telefone</th>
-      <th>E-mail</th>
-      <th>Tipo</th>
-      <th>Editar?</th>
-    </tr>
-  </thead>
-
-  @foreach ($users as $u)
-  <tr>
-    <td>{{$u->id}}</td>
-    <td><a href="/users/{{ $u->id }}">{{ $u->nome }}</a></td>
-    <td>{{$u->telefone}}</td>
-    <td>{{$u->email}}</td>
-    <td>
-        @if($u->tipo == 1) Funcionário @endif
-        @if($u->tipo == 2) Cliente @endif
-    </td>
-    <td> <a class="btn btn-primary fa fa-edit" href="/users/{{ $u->id }}/edit">  Editar</a> </td>
-  </tr>
-  @endforeach
-</table>
-@stop
+@extends('layout.app')
+@section('content_page')
+ <div class="jumbotron text-center">
+                  <h1>Usuários do Sistema</h1>
+              </div>
+              <a class="btn btn-primary" href="/users/create">Inserir ADM</a>
+                  <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Código</th>
+                          <th>Nome</th>
+                          <th>Título de Eleitor</th>
+                          <th>CPF</th>
+                          <th>Data de Nascimento</th>
+                          <th>Editar</th>
+                          <th>Excluir</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                    @foreach($users as u)
+                      <tr>
+                      <td>{{$u->id}}</td>
+                      <td>{{$u->name}}</td>
+                      <td>{{$u->titEleitor}}</td>
+                      <td>{{$u->cpf}}</td>
+                      <td>{{$u->dataNascimento}}</td>
+                      <td><a href="/users/{{ $u->id}}/edit"><i class="fa fa-pencil fa-fw"></i>Editar</a></td>
+                      <td><a href="/users/{{ $u->id }}"><i class="fa fa-trash-o fa-fw"></i> Excluir</a></td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                    </table>
+@endsection

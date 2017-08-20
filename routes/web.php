@@ -8,6 +8,7 @@ Route::get('dashboard', function () {
 });
 //Rotas para dashboard de projetos e recuros de projetos
 
+Route::resource('/users', 'UserController');
 Route::resource('/votos', 'VotosController');
 Route::resource('/projetos', 'ProjetosController');
 Route::get('/votar/{idProjeto}',[

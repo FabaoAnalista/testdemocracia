@@ -17,19 +17,26 @@ class UserController extends Controller
 
   //  }
 
-        public function show($id)
+  public function show($id)
     {
-      //if(Auth::user()->type == 2 || Auth::id() == $id) {
-          $user = User::findOrFail($id);
-          return view('users.show', ['user' => $user]);
-      //}  else {
-      //    return redirect('/');
-      //}
+        $users = Users::find($id);
+        return view('users.show')->with('users',$users);
+    }
+    public function edit($id)
+    {
+        $users = Users::find($id);
+        return view('users.edit')->with('users',$users);
     }
 
+        
+
     public function index(){
-        if (Auth::user()->type == 2){
-        return view('dashboard');} else return view('home');
+        if (Auth::user()->type == 1){
+        return view('projetos.index');} 
+        else {
+          $users = User::all();
+          return view('users.index')->with('users', $users);
+        }
     }
 
     public function create()
@@ -56,23 +63,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function edit($id)
-    {
-      //if(Auth::user()->type == 2 || Auth::id() == $id) {
-          $user = User::findOrFail($id);
-          return view('users.edit', ['user' => $user]);
-      //}  else {
-      //    return redirect('/');
-      //}
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
       //if(Auth::user()->type == 2 || Auth::user()->type == 3) {
@@ -84,7 +75,7 @@ class UserController extends Controller
           $user->nomeMae = $request->get("nomeMae");
           $user->cpf = $request->get("cpf");
           $user->titEleitor = $request->get("titEleitor");
-          $user->tipo = '2';
+          $user->tipo = '1';
           $user->dataNascimento = $request->get("dataNascimento");
 
           /*if ($request->file('imagem')!=null && $request->file('imagem')->isValid()) {
