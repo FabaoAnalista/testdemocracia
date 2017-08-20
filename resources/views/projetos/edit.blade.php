@@ -1,8 +1,9 @@
+
 @include('layout.header')
     @include('layout.sidebar')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        @yield('title_page')
+        @yield('Editar_Projetos')
       <!-- Main content -->
         <section class="content">
           @section('conteudo')
