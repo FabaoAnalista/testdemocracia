@@ -33,14 +33,24 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="#"><span>Link</span></a></li>
             <li><a href="#"><span>Another Link</span></a></li>
-            <li><a href="#"><span>Teste</span></a></li>
+             @if (Auth::user()->type==1)
             <li class="treeview">
-                <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><span>Relatórios</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="/projetos">Projetos</a></li>
+                    <li><a href="/users">Usuários</a></li>
                 </ul>
             </li>
+            @else
+            <li class="treeview">
+                <a href="#"><span>Configuração de Usuário</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="/alterar/profile">Alterar Nome</a></li>
+                    <li><a href="/alterar/password">Alterar Senha</a></li>
+                    <li><a href="/alterar/email">Alterar Email</a></li>
+                </ul>
+            </li>
+            @endif
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
