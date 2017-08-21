@@ -22,6 +22,20 @@ public function index()
       } else $p = Projetos::all();
       return view ('painelvotar')->with('projetos',$p);
 }
+
+public function ativos()
+{
+        $ativos = Projetos::where('statusProjeto','==',0)->get();
+        return view ('projetos.ativos')->with('ativos', $ativos);
+    
+}
+
+public function encerrados()
+{
+        $encerrados = Projetos::where('statusProjeto','==',1)->get();
+        return view ('projetos.encerrados')->with('encerrados', $encerrados);
+    
+}
 /**
  * Show the form for creating a new resource.
  *

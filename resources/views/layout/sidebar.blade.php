@@ -33,12 +33,14 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="#"><span>Link</span></a></li>
             <li><a href="#"><span>Another Link</span></a></li>
-             @if (Auth::user()->type==1)
+             @if (Auth::user()->type==2)
+             
+            <li><a href="/projetos">Editar Projetos</a></li>
             <li class="treeview">
                 <a href="#"><span>Relatórios</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="/projetos">Projetos</a></li>
-                    <li><a href="/users">Usuários</a></li>
+                    <li><a href="{{route('ativos')}}">Projetos Ativos</a></li>
+                    <li><a href="{{route('encerrados')}}">Projetos Encerrados</a></li>
                 </ul>
             </li>
             @else

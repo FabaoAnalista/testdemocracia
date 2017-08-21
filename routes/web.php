@@ -12,7 +12,21 @@ Route::get('dashboard', function () {
 Route::resource('/users', 'UserController');
 Route::resource('/votos', 'VotosController');
 Route::resource('/projetos', 'ProjetosController');
-
+Route::get('/votar/{idProjeto}',
+    [
+        'uses' => 'VotosController@votar',
+        'as'   => 'votar'
+      ]);
+Route::get('/ativos',
+    [
+        'uses' => 'ProjetosController@ativos',
+        'as'   => 'ativos'
+      ]);
+Route::get('/encerrados',
+    [
+        'uses' => 'ProjetosController@encerrados',
+        'as'   => 'encerrados'
+      ]);
 Route::get('users/password', function () {
     return view('users.password');
 });
