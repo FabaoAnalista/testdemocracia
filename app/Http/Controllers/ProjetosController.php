@@ -14,9 +14,9 @@ class ProjetosController extends Controller
  }
 public function index()
 {
-        
+
       if(Auth::user()->type == 1){
-    
+
     $p = Projetos::all();
     return view ('projetos.index')->with('projetos', $p);
       } else $p = Projetos::all();
@@ -25,16 +25,16 @@ public function index()
 
 public function ativos()
 {
-        $ativos = Projetos::where('statusProjeto','==',0)->get();
+        $ativos = Projetos::where('statusProjeto','=',0)->get();
         return view ('projetos.ativos')->with('ativos', $ativos);
-    
+
 }
 
 public function encerrados()
 {
-        $encerrados = Projetos::where('statusProjeto','==',1)->get();
+        $encerrados = Projetos::where('statusProjeto','=',1)->get();
         return view ('projetos.encerrados')->with('encerrados', $encerrados);
-    
+
 }
 /**
  * Show the form for creating a new resource.
@@ -77,7 +77,7 @@ public function store(Request $request)
 public function update(Request $request, $id)
 {
 
-       
+
   $projetos = Projetos::find($id);
   $projetos->titulo = $request->titulo;
   $projetos->subTitulo = $request->subTitulo;

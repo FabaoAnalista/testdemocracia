@@ -32,17 +32,20 @@ class VotosController extends Controller
     public function votar($id){
 
         $usuario = Auth::user()->id;
+        $votoss = Votos::where('projeto_idProjeto','=',$id)->where('users_id','=',$usuario)->first();
+        if($votoss == null) {
            Votos::create([
           'users_id' => $usuario,
           'projeto_idProjeto' => $id
       ]);
           $projeto = Projetos::find($id);
           $projeto->numvotos += 1;
-          
+
           if($projeto->numvotos == $projeto->metaVotos){
               $projeto->statusProjeto = 1;
           }
           $projeto->save();
+        }
     return redirect ('/projetos');
     }
     public function create()
@@ -58,7 +61,7 @@ class VotosController extends Controller
      */
     public function store(Request $request)
     {
-        
+
     }
 
     /**

@@ -55,13 +55,21 @@
         <div class="container-fluid">
         <header class="w3-container w3-blue w3-center" style="padding:70px 20px">
           <h1 class="w3-margin w3-jumbo">Sisdemocracia</h1>
-          <p class="w3-xlarge">Um sistema para projetos de iniciativa popular de João Monlevade</p>
+          <p class="w3-xlarge">Um sistema para projetos de iniciativa popular de João Monlevade.Assine um projeto de lei
+Um projeto de lei de iniciativa popular precisa atingir uma porcentagem mínima de assinaturas de eleitores para ser encaminhado e apresentado em uma classe legislativa</p>
           <!--Pensar sobre utilidade do button -->
 
           <a href="{{ route('login') }}" class="w3-button w3-white w3-padding-large w3-large w3-margin-top" role="button" aria-pressed="true">Votar em Projetos</a>
         </header>
         </div>
-        <h2 >Conheça nossos projetos</h2>
+        <div class="jumbotron">
+          <div class="container-fluid">
+            <h2 >Conheça nossos projetos de Iniciativa popular</h2>
+          </div>
+
+        </div>
+
+
         <div class="container-fluid">
           <div class="row">
               <div class="col-sm-6 col-md-4 clearfix">

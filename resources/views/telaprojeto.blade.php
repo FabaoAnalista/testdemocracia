@@ -9,11 +9,7 @@
             <div class="container">
             <div class="row">
               <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan,
-                  massa tincidunt porttitor viverra, diam magna varius tellus, ac tincidunt ligula
-                   mi nec arcu. In ac nisl vehicula, luctus nulla nec, pulvinar ante.
-                    Cras in eros ac eros faucibus efficitur. Nam efficitur, dolor aliquam blandit venenatis,
-                    velit orci iaculis enim, eget commodo magna justo ac risus.</p><br>
+
               </div>
               <div class="col">
               <p>Nulla consectetur dignissim pellentesque. Nunc convallis consectetur feugiat.

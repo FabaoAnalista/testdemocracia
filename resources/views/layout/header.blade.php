@@ -36,7 +36,7 @@
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="{{ url('/projetos') }}" class="logo"><b>Sisdemocracia</b></a>
+            <a href="{{ url('/') }}" class="logo"><b>Sisdemocracia</b></a>
 
             <!-- Header Navbar -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -66,6 +66,7 @@
 
                                                 </div>
                                                 <!-- Message title and timestamp -->
+
                                                 <h4>
 
                                                     <small><i class="fa fa-clock-o"></i></small>
@@ -81,6 +82,8 @@
                         </li><!-- /.messages-menu -->
 
                         <!-- Notifications Menu -->
+
+                        <li><a href="{{route('home')}}">Logout</a></li>
                         <li class="dropdown notifications-menu">
                             <!-- Menu toggle button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">

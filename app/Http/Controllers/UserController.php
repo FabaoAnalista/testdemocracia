@@ -28,12 +28,10 @@ class UserController extends Controller
         return view('users.edit')->with('users',$users);
     }
 
-        
-
     public function index(){
         if (Auth::user()->type == 2){
-        
-    return redirect('/projetos');} 
+
+    return redirect('/projetos');}
         else {
           $users = User::all();
           return view('users.index')->with('users', $users);
@@ -64,7 +62,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    
+
     public function update(Request $request, $id)
     {
       //if(Auth::user()->type == 2 || Auth::user()->type == 3) {
@@ -126,7 +124,7 @@ class UserController extends Controller
                      ->update(['name' => $request->name]);
                 return redirect('/dashboard');
     }
-    
+
    public function destroy($id)
 {
     $user = User::find($id);
