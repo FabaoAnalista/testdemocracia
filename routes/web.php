@@ -39,10 +39,6 @@ Route::get('users/profile', function () {
 
 Auth::routes();
 
-Route::get('teste', function () {
-    return view('teste');
-});
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('alterar/password', function () {
@@ -57,6 +53,10 @@ Route::get('alterar/profile', function () {
 Route::get('/painelvotar', function () {
     return view('painelvotar');
 });
+Route::get('/telaprojeto', function () {
+    return view('telaprojeto');
+});
+
 
 Route::post('users/updatepassword', 'UserController@updatepassword');
 Route::post('users/updateemail', 'UserController@updateemail');
